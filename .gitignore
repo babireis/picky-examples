@@ -1,0 +1,6 @@
+*.log
+*.pid
+*.project
+.project
+.DS_Store
+node_modules

@@ -1,0 +1,27 @@
+{
+  "name": "simple-picky-gulp",
+  "version": "0.1.0",
+  "description": "Simple picky tests using Gulp",
+  "license": "MIT",
+  "author": {
+    "name": "Gabriele Di Stefano"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gabrieleds/picky.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "picky": "*",
+    "gulp": "*"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
