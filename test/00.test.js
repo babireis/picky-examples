@@ -1,11 +1,12 @@
 
 describe('Prepare', function() {
 
-  it.skip('application', function(done) {
-    var app = global.app = require('../index');
-    app.on('start', function () {
-      done();
-    })
+  it.only('application', function(done) {
+    done();
+    // var app = global.app = require('../index');
+    // app.on('start', function () {
+    //   done();
+    // })
   });
 
   it('application 2', function(done) {
