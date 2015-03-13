@@ -22,6 +22,8 @@
     "picky": "*",
     "gulp": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
   "keywords": []
 }
