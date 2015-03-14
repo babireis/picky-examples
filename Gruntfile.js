@@ -7,7 +7,9 @@ module.exports = function (grunt) {
 
       'test': {
         options: {
-          reporter: 'spec'
+          engine: {
+            reporter: 'spec'
+          }
         },
         src: 'test/**/*.@(test|feature|library|dictionay|steps)?(.js)'
       },
@@ -15,7 +17,9 @@ module.exports = function (grunt) {
       'ui': {
         options: {
           ui: true,
-          reporter: 'spec'
+          engine: {
+            reporter: 'spec'
+          }
         },
         src: 'test/**/*.@(test|feature|library|dictionay|steps)?(.js)'
       }
@@ -27,7 +31,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('picky');
 
   grunt.registerTask('test', ['picky:test']);
-  grunt.registerTask('test:ui', ['picky:test:ui']);
+  grunt.registerTask('test:ui', ['picky:ui']);
+
   grunt.registerTask('default', ['test']);
 
 }
