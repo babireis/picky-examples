@@ -17,6 +17,7 @@ module.exports = function (grunt) {
       'ui': {
         options: {
           ui: true,
+          watch: true,
           engine: {
             reporter: 'spec'
           }

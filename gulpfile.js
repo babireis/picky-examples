@@ -3,9 +3,10 @@ var Picky = require('picky');
 var gulp = require('gulp');
 
 gulp.task('test', function () {
-    return gulp.src('test/**/*.@(test.js|feature)', {
+    return gulp.src(Picky.glob, {
       read: false
-    }).pipe(Picky({  // or Picky.gulp
+    }).pipe(Picky({
+      devices: 'nexus5',
       engine: {
         reporter: 'spec'
       }
@@ -13,10 +14,11 @@ gulp.task('test', function () {
 });
 
 gulp.task('test:ui', function () {
-    return gulp.src('test/**/*.@(test.js|feature)', {
+    return gulp.src(Picky.glob, {
       read: false
-    }).pipe(Picky({  // or Picky.gulp
+    }).pipe(Picky({
       ui: true,
+      watch: true,
       engine: {
         reporter: 'spec'
       }

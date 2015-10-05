@@ -1,82 +1,112 @@
-// "use strict";
 
-// var wd = require("wd");
+var path = require('path');
 
-// // require('colors');
-// var chai = require("chai");
-// var chaiAsPromised = require("chai-as-promised");
-// chai.use(chaiAsPromised);
-// var should = chai.should();
-// chaiAsPromised.transferPromiseness = wd.transferPromiseness;
+describe('Prepare', function() {
 
-// exports.should = should;
+  it('application', function(done) {
+    'ciao'.should.be.eql('ciao');
+    done();
+  });
 
+  // describe("android simple", function () {
+  //   this.timeout(300000);
 
-// var serverConfigs = {};
-// serverConfigs.local = {
-//   host: 'localhost',
-//   port: 4723
-// };
+  //   before(function (done) {
+  //     var step = this.steps.mobile;
 
+  //     console.log('eeeeeeee', step)
+  //     var device = new step.Device({
+  //       // browserName: 'chrome',
+  //       // 'appium-version': '1.3',
+  //       platformName: 'Android',
+  //       // platformVersion: '2.3.5',
+  //       deviceName: 'Android Emulator',
+  //       // avd: 'test2',
+  //       app: path.join(__dirname, "../test-device/apps/ApiDemos-debug.apk") // will be set later
+  //     });
 
+  //     device.start(function () {
 
-
-
-// var wd = require("wd"),
-//     _ = require('underscore');
-
-// describe("android simple", function () {
-//   this.timeout(300000);
-//   var driver;
-//   var allPassed = true;
-
-//   before(function () {
-//     var serverConfig = serverConfigs.local;
-//     driver = wd.promiseChainRemote(serverConfig);
-//     require("./helpers/logging").configure(driver);
-
-//     var desired = _.clone(require("./helpers/caps").android18);
+  //       done();
+  //     });
 
 
-//     // desired.app = require("./helpers/apps").androidApiDemos;
+  //     // new step.Device({
+  //     //   // browserName: 'chrome',
+  //     //   // 'appium-version': '1.3',
+  //     //   platformName: 'Android',
+  //     //   // platformVersion: '4.4.2',
+  //     //   deviceName: 'Android Emulator',
+  //     //   avd: 'test2',
+  //     //   app: path.join(__dirname, "../test-device/apps/ApiDemos-debug.apk") // will be set later
+  //     // }).start(function () {
 
-//     // if (process.env.SAUCE) {
-//     //   desired.name = 'android - simple';
-//     //   desired.tags = ['sample'];
-//     // }
-//     return driver
-//       .init(desired)
-//       .setImplicitWaitTimeout(3000);
-//   });
+  //     //     // done();
+  //     //   new step.Device({
+  //     //     // browserName: 'chrome',
+  //     //     // 'appium-version': '1.3',
+  //     //     platformName: 'Android',
+  //     //     // platformVersion: '4.4.2',
+  //     //     deviceName: 'Android Emulator',
+  //     //     avd: 'test',
+  //     //     port:3020,
+  //     //     app: path.join(__dirname, "../test-device/apps/ApiDemos-debug.apk") // will be set later
+  //     //   }).start(function () {
 
-//   after(function () {
-//     return driver
-//       .quit()
-//       .finally(function () {
-//         if (process.env.SAUCE) {
-//           return driver.sauceJobStatus(allPassed);
-//         }
-//       });
-//   });
+  //     //     var device = new step.Device({
+  //     //       // browserName: 'chrome',
+  //     //       // 'appium-version': '1.3',
+  //     //       platformName: 'Android',
+  //     //       // platformVersion: '2.3.5',
+  //     //       deviceName: 'Android Emulator',
+  //     //       // avd: 'test',
+  //     //       port:3021,
+  //     //       app: path.join(__dirname, "../test-device/apps/ApiDemos-debug.apk") // will be set later
+  //     //     });
 
-//   afterEach(function () {
-//     allPassed = allPassed && this.currentTest.state === 'passed';
-//   });
+  //     //     device.start(function () {
+  //     //       done();
+  //     //     });
 
-//   it("should find an element", function () {
-//     return driver
-//       .elementByAccessibilityId('Graphics')
-//       .click()
-//       .elementByAccessibilityId('Arcs')
-//         .should.eventually.exist
-//       .back()
-//       .elementByName('App')
-//         .should.eventually.exist
-//       .elementsByAndroidUIAutomator('new UiSelector().clickable(true)')
-//         .should.eventually.have.length(12)
-//       .elementsByAndroidUIAutomator('new UiSelector().enabled(true)')
-//         .should.eventually.have.length.above(20)
-//       .elementByXPath('//android.widget.TextView[@text=\'API Demos\']')
-//         .should.exists;
-//   });
-// });
+
+  //     //   });
+  //     // });
+
+  //   });
+
+  //   after(function (done) {
+  //     var step = this.steps.mobile;
+  //     done();
+  //   });
+
+  //   // afterEach(function () {
+  //   //   allPassed = allPassed && this.currentTest.state === 'passed';
+  //   // });
+
+  //   it("should find an element", function (done) {
+  //     var step = this.steps.mobile;
+
+  //     step.devices.each(function (device, next) {
+  //       device.emulator
+  //         .elementByAccessibilityId('Graphics')
+  //         .click()
+  //         .elementByAccessibilityId('Arcs')
+  //           // .should.eventually.exist
+  //         .back()
+  //         .elementByName('App')
+  //           // .should.eventually.exist
+  //         .elementsByAndroidUIAutomator('new UiSelector().clickable(true)')
+  //           // .should.eventually.have.length(12)
+  //         .elementsByAndroidUIAutomator('new UiSelector().enabled(true)')
+  //           // .should.eventually.have.length.above(20)
+  //         .elementByXPath('//android.widget.TextView[@text=\'API Demos\']')
+  //           // .should.exists;
+  //         .then(function () {
+  //           next();
+  //         });
+  //     }, done);
+
+  //   });
+  // });
+
+});

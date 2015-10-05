@@ -1,0 +1,41 @@
+{
+  "steps": [
+    "picky-mobile"
+  ],
+  "reporter": "spec",
+  "mobile": {
+    "local": {
+      "devices": {
+        "nexus5 (already open emulator)": {
+          "platformName": "Android",
+          "deviceName": "Android Emulator",
+          "app": "../test-device/apps/ApiDemos-debug.apk"
+        },
+        "nexus5": {
+          "platformName": "Android",
+          "deviceName": "Android Emulator",
+          "app": "../test-device/apps/ApiDemos-debug.apk",
+          "avd": "test2"
+        }
+      }
+    }
+  },
+  "browser": {
+    "local": {
+      "devices": {
+        "firefox": {
+          "browser": "firefox"
+        },
+        "phantomjs": {
+          "browser": "phantomjs"
+        },
+        "safari": {
+          "browser": "safari"
+        },
+        "chrome": {
+          "browser": "chrome"
+        }
+      }
+    }
+  }
+}

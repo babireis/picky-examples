@@ -1,16 +1,14 @@
 
-var Picky = require('picky');
 var assert = require('assert');
 
-var dictionary = Picky.feature.dictionary('gino');
-var library = Picky.feature.library('gino', dictionary);
+module.exports = function (Picky, runner, suite) {
 
-dictionary.define('NUM', /(\d+)/);
+  var dictionary = Picky.feature.dictionary('bottles');
+  var library = Picky.feature.library('bottles', dictionary);
 
-module.exports = (function() {
+  dictionary.define('NUM', /(\d+)/);
 
   var wall;
-
   library
     .given("a $NUM foot wall", function(height, next) {
         wall = new Wall();
@@ -23,6 +21,7 @@ module.exports = (function() {
     })
 
     .when("$NUM green bottle accidentally falls", function(number_of_falling_bottles, next) {
+
         wall.fall(number_of_falling_bottles);
         next();
     })
@@ -46,4 +45,4 @@ module.exports = (function() {
 
   return library;
 
-})();
+}
