@@ -1,5 +1,5 @@
 {
-  "steps": [
+  "plugins": [
     "picky-mobile"
   ],
   "reporter": "spec",
@@ -16,6 +16,16 @@
           "deviceName": "Android Emulator",
           "app": "../test-device/apps/ApiDemos-debug.apk",
           "avd": "test2"
+        },
+        "android": {
+          "platformName": "Android",
+          "deviceName": "Android Emulator",
+          "app": "../test-device/apps/android-example.apk"
+        },
+        "iOS": {
+          "platformName": "iOS",
+          "deviceName": "iPhone 6",
+          "app": "../test-device/apps/ios-example.app"
         }
       }
     }
