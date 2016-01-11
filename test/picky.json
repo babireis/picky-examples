@@ -2,7 +2,7 @@
   "plugins": [
     "picky-mobile"
   ],
-  "reporter": "spec",
+  "reporter": "picky",
   "mobile": {
     "local": {
       "devices": {
@@ -15,7 +15,7 @@
           "platformName": "Android",
           "deviceName": "Android Emulator",
           "app": "../test-device/apps/ApiDemos-debug.apk",
-          "avd": "test2"
+          "avd": "nexus5"
         },
         "android": {
           "platformName": "Android",

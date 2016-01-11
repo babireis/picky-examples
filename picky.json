@@ -1,7 +1,0 @@
-{
-  "steps": [
-    "picky-mobile",
-    "./test/steps/bottles.steps.js"
-  ],
-  "reporter": "spec"
-}

@@ -1,39 +1,19 @@
 
-module.exports = function (grunt) {
+module.exports = function(Grunt) {
 
-  grunt.initConfig({
+  Grunt.initConfig({
 
     'picky': {
-
-      'test': {
-        options: {
-          engine: {
-            reporter: 'spec'
-          }
-        },
-        src: 'test/**/*.@(test|feature|library|dictionay|steps)?(.js)'
-      },
-
-      'ui': {
-        options: {
-          ui: true,
-          watch: true,
-          engine: {
-            reporter: 'spec'
-          }
-        },
-        src: 'test/**/*.@(test|feature|library|dictionay|steps)?(.js)'
+      options: {
+        reporter: 'picky'
       }
-
     }
 
   });
 
-  grunt.loadNpmTasks('picky');
+  Grunt.loadNpmTasks('picky');
 
-  grunt.registerTask('test', ['picky:test']);
-  grunt.registerTask('test:ui', ['picky:ui']);
-
-  grunt.registerTask('default', ['test']);
+  Grunt.registerTask('test', ['picky']);
+  Grunt.registerTask('default', ['test']);
 
 }

@@ -1,28 +1,21 @@
 
 var Picky = require('picky');
-var gulp = require('gulp');
+var Gulp = require('gulp');
 
-gulp.task('test', function () {
-    return gulp.src(Picky.glob, {
-      read: false
-    }).pipe(Picky({
-      devices: 'nexus5',
-      engine: {
-        reporter: 'spec'
-      }
-    }));
+Gulp.task('test', function() {
+  return Picky({
+    devices: 'nexus5',
+    reporter: 'picky'
+  });
 });
 
-gulp.task('test:ui', function () {
-    return gulp.src(Picky.glob, {
-      read: false
-    }).pipe(Picky({
-      ui: true,
-      watch: true,
-      engine: {
-        reporter: 'spec'
-      }
-    }));
-});
+// OR
 
-gulp.task('default', ['test']);
+// Gulp.task('test', function(done) {
+//   Picky({
+//     devices: 'nexus5',
+//     reporter: 'picky'
+//   }, done);
+// });
+
+Gulp.task('default', ['test']);
