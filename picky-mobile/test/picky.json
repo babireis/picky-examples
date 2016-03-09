@@ -1,0 +1,16 @@
+{
+  "reporter": "picky",
+  "timeout": 30000,
+  "plugins": [
+    "picky-mock",
+    "picky-mobile"
+  ],
+  "mobile": {
+    "local": {
+      "devices": {
+        "android": {}
+      }
+    },
+    "allowedDevices": []
+  }
+}

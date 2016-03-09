@@ -1,0 +1,19 @@
+{
+  "name": "picky-examples-picky-browser",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Gabriele Di Stefano"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "scripts": {
+    "test": "node ../node_modules/picky/bin/picky run ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "picky": "2.x.x",
+    "picky-browser": "2.x.x"
+  }
+}

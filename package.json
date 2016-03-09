@@ -1,14 +1,14 @@
 {
-  "name": "simple-picky-gulp",
+  "name": "picky-examples",
   "version": "0.1.0",
-  "description": "Simple Picky tests using Gulp",
+  "description": "Picky examples",
   "license": "MIT",
   "author": {
     "name": "Gabriele Di Stefano"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gabrieleds/picky.git"
+    "url": "git://github.com/pickyjs/picky-examples.git"
   },
   "engines": {
     "node": "*"
@@ -19,11 +19,11 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "picky": "*",
-    "gulp": "*"
+    "appium-sample-code": "git+https://github.com/appium/sample-code",
+    "grunt": "*",
+    "gulp": "*",
+    "picky": "*"
   },
-  "devDependencies": {
-    "grunt": "^0.4.5"
-  },
+  "devDependencies": {},
   "keywords": []
 }
