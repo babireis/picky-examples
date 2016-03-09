@@ -1,0 +1,17 @@
+{
+  "reporter": "picky",
+  "timeout": 30000,
+  "plugins": [
+    "picky-mock",
+    "picky-browser"
+  ],
+  "log": {
+
+  },
+  "browser": {
+    "devices": [
+      "phantom"
+    ],
+    "allowedDevices": []
+  }
+}

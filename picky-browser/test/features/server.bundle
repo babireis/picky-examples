@@ -1,0 +1,10 @@
+
+Bundle: I start the test server
+
+    Given I start the server Local on port 3001
+    And Serves the assets from the folder ../
+    And Serves the assets from the folder ../../build
+
+Bundle: I stop the test server
+
+    Then I stop the server Local

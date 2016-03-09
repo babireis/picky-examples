@@ -1,0 +1,13 @@
+*.log
+*.pid
+*.git
+*.project
+bower.json
+.project
+.DS_Store
+node_modules
+test
+temp
+tmp
+examples
+docs

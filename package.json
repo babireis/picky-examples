@@ -1,0 +1,29 @@
+{
+  "name": "picky-examples",
+  "version": "0.1.0",
+  "description": "Picky examples",
+  "license": "MIT",
+  "author": {
+    "name": "Gabriele Di Stefano"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pickyjs/picky-examples.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "appium-sample-code": "git+https://github.com/appium/sample-code",
+    "grunt": "^0.4.5",
+    "gulp": "*",
+    "picky": "*"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
